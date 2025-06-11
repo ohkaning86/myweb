@@ -1,12 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>모바일 반응형 웹 - 시(詩) 예제</title>
+  <!-- 모바일 반응형을 위한 viewport 설정 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: '맑은 고딕', sans-serif;
+      background: #f2f6fa;
+    }
+    .poem-container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: linear-gradient(135deg, #b7eaff 0%, #ffdee9 100%);
+      border-radius: 20px;
+      padding: 32px 20px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+      color: #343a40;
+      text-align: center;
+      transition: background 0.3s;
+    }
+    .poem-title {
+      font-size: 1.7rem;
+      font-weight: bold;
+      margin-bottom: 24px;
+      color: #3677eb;
+      letter-spacing: 0.05em;
+    }
+    .poem-author {
+      margin-top: 24px;
+      font-size: 1.1rem;
+      color: #888;
+      font-style: italic;
+    }
 
-    <head>
-      테스트 페이지입니다.
-    </head>
-
-    <body>
-        <h1>테스트 홈페이지를 만들어 봅시다</h1>
-    </body>
-
+    /* 모바일 최적화 */
+    @media (max-width: 480px) {
+      .poem-container {
+        padding: 20px 8px;
+        font-size: 1.04rem;
+      }
+      .poem-title {
+        font-size: 1.22rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="poem-container">
+    <div class="poem-title">봄날의 바람</div>
+    <div>
+      <p>
+        햇살이 따스하게<br>
+        골목을 비추면,<br>
+        내 마음 한 구석에도<br>
+        꽃이 핀다.<br>
+        <br>
+        바람이 조용히<br>
+        창문을 두드리면,<br>
+        잊고 있던 설렘이<br>
+        살며시 깨어난다.
+      </p>
+    </div>
+    <div class="poem-author">- ChatGPT, 2025</div>
+  </div>
+</body>
 </html>
